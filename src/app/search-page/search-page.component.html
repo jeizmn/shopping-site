@@ -1,0 +1,28 @@
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <!-- Search input -->
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" [(ngModel)]="searchText" placeholder="Enter your search">
+        <button class="btn btn-primary" (click)="search()">Search</button>
+      </div>
+      <!-- Display search results -->
+      <div class="search-results" *ngIf="searchResults.length > 0">
+        <!-- Scrollable div to contain search results -->
+        <div class="scrollable">
+          <!-- Iterate over each product in search results -->
+          <div *ngFor="let product of searchResults" class="result-item" (click)="navigateToProduct(product.id)"
+            (mouseover)="addBorder($event)" (mouseleave)="removeBorder($event)">
+            <img [src]="product.thumbnail" alt="{{ product.title }}" class="thumbnail">
+            <div class="details">
+              <h4>{{ product.title }}</h4>
+              <p>Price: {{ product.price }}</p>
+              <p>Rating: {{ product.rating }}</p>
+              <p>Brand: {{ product.brand }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

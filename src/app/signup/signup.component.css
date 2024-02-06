@@ -1,0 +1,65 @@
+/* Adjust container to fit between header and footer */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 100px); /* Subtract the height of the header and footer */
+    overflow-y: auto; /* Enable vertical scrolling if content exceeds viewport height */
+  }
+  
+  /* Form container styles */
+  .form-container {
+    width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  /* Form title */
+  .form-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  /* Form input styles */
+  .form-control {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Form submit button styles */
+  .btn-primary {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  /* Form submit button hover effect */
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Success message styles */
+  .success-message {
+    color: #28a745;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  /* Error message styles */
+  .error-message {
+    color: #dc3545;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
